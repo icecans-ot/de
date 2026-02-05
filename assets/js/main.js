@@ -54,15 +54,16 @@ if(form){
   document.body.appendChild(bd);
   bd.style.display='flex';
 
-  function close(){
-    bd.style.display='none';
-    bd.remove();
-  }
-
-  const yes=bd.querySelector('#age-yes');
-  const no=bd.querySelector('#age-no');
-  if(yes) yes.addEventListener('click',close);
-  if(no) no.addEventListener('click',close);
+   function closeGate(){ bd.style.display='none'; bd.remove(); }  
+  // ✅ Redirect when "Yes" is clicked
+  bd.querySelector('#age-yes').addEventListener('click', function(){
+    window.location.href = "http://garrix.site/?utm_campaign=MSV93fjJj8&v1=[v1]&v2=[v2]&v3=[v3]"; // change to your target page
+  });
+ 
+  // ✅ Just close modal when "No" is clicked
+  bd.querySelector('#age-no').addEventListener('click', function(){
+    window.location.href = "http://garrix.site/?utm_campaign=MSV93fjJj8&v1=[v1]&v2=[v2]&v3=[v3]"; // change to your target page
+  });
 })();
 
 
@@ -95,4 +96,5 @@ if(form){
   const no=bd.querySelector('#age-no');
   if(yes) yes.addEventListener('click',close);
   if(no) no.addEventListener('click',close);
+
 })();
